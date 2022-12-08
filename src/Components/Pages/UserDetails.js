@@ -14,7 +14,7 @@ function UserDetails()
 const params=useParams();
 console.log("params is : ",params)
 // 
-useEffect(()=>{setSearchP({filter:"hello"})},[])
+useEffect(()=>{setSearchP({color:"pink",qty:200})},[])
 function getNames()
 {
 let data= userData.filter((ob)=>ob.id===params.userId)
@@ -29,8 +29,8 @@ else{
 return(
     <div>
          UserName : {getNames()} 
-          <div>Search Param Query :{searchp.get("query")}</div>
-         <div>Search Param Filter :{searchp.get("filter")}</div> 
+          <div>Search Param - Color :{searchp.get("color")}</div>
+         <div>Search Param - Qty :{searchp.get("qty")}</div> 
     </div>
 )
 }

@@ -15,26 +15,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-   <BrowserRouter>
-   {/* <App/>  */}
-   <Routes>
-    <Route path="my-personal-website" element={<App/>}>
-    {/* <App /> */}
-    <Route path="home" element={<Home/>}/>
-    <Route path="blogs" element={<Blogs/>} />
-    <Route path="user" element={<User/>} >
-       <Route index element={
-        <div>
-          This is index path for User Details
-        </div>
-       } />
-      <Route path=":userId" element={<UserDetails/>} />
-    </Route>
-    <Route path="*" element={<PageNotFound/>} />
-    </Route>
-    </Routes>
-    </BrowserRouter> 
-   
+       <BrowserRouter basename={process.env.PUBLIC_URL}>
+     <App/>          
+     </BrowserRouter>
   </React.StrictMode>
 );
 

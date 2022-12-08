@@ -6,26 +6,47 @@ import NavBar from './Components/NavBar/NavBar';
 // import Home from './Components/Pages/Home';
 // import Blogs from './Components/Pages/Blogs';
 // import User from './Components/Pages/User';
-import {Outlet} from "react-router-dom";
+import {Outlet,Routes,Route,BrowserRouter} from "react-router-dom";
 import LinkExample from './Components/LinkExample/LinkExample';
+import Ecom from './Components/Ecom';
+import PageNotFound from './Components/Pages/PageNotFound';
+import UserDetails from './Components/Pages/UserDetails';
+import User from './Components/Pages/User';
+import Blogs from './Components/Pages/Blogs';
+import Home from './Components/Pages/Home';
 function App() {
   return (
-  //  <BrowserRouter>
+ 
+  
+    
        <div className="App">
-   
+    
    <NavBar/>
-   {/* <LinkExample/> */}
-      {/* <Routes>
-        {/* <Route path="/home" element={<Home/>}/>
-        <Route path="/blogs" element={<Blogs/>}/> */}
-        {/* using nested Routes */}
-        
-      {/* </Routes> */}
+   
+
      
      
-   <Outlet/>      
+   {/* <Outlet/> */}
+   <Routes>
+     {/* <Route path="/" element={<App/>}> */}
+     {/* <App /> */}
+     <Route path="/" element={<Home/>}/>
+     <Route path="blogs" element={<Blogs/>} />
+     <Route path="user" element={<User/>} >
+        <Route index element={
+         <div>
+           This is index path for User Details
+         </div>
+        } />
+       <Route path=":userId" element={<UserDetails/>} />
+     </Route>
+     <Route path="*" element={<PageNotFound/>} />
+   
+     </Routes>
+ 
+   
     </div>
-    // </BrowserRouter>
+    
    
   );
 }
