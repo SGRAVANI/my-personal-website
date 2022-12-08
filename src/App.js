@@ -9,7 +9,7 @@ import NavBar from './Components/NavBar/NavBar';
 import {Outlet,Routes,Route,BrowserRouter} from "react-router-dom";
 import LinkExample from './Components/LinkExample/LinkExample';
 import Ecom from './Components/Ecom';
-import PageNotFound from './Components/Pages/PageNotFound';
+import PageNotFound from './Components/NestedRoute/Pages/PageNotFound';
 import UserDetails from './Components/Pages/UserDetails';
 import User from './Components/Pages/User';
 import Blogs from './Components/Pages/Blogs';
