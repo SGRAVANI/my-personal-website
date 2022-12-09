@@ -14,13 +14,14 @@ import UserDetails from './Components/Pages/UserDetails';
 import User from './Components/Pages/User';
 import Blogs from './Components/Pages/Blogs';
 import Home from './Components/Pages/Home';
+import DataInContext from './Components/Pages/DataInContext';
 function App() {
   return (
  
   
-    
+    <DataInContext> 
        <div className="App">
-    
+ 
    <NavBar/>
    
 
@@ -44,9 +45,9 @@ function App() {
    
      </Routes>
  
-   
+      
     </div>
-    
+    </DataInContext>
    
   );
 }
