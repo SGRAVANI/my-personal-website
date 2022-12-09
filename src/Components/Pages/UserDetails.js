@@ -41,7 +41,8 @@ return(
           {/* <div>Search Param - Color :{searchp.get("color")}</div>
          <div>Search Param - Qty :{searchp.get("qty")}</div>  */}
          <div>
-         <button className="mt-3 btn btn-primary"><BsHeart className="me-2" onClick={handleClick} />Like</button>
+         <button className="mt-3 mb-2 btn btn-primary" onClick={handleClick}><BsHeart className="me-2 "  />Like</button>
+         <br/>{cont.likeCount}
          </div>
     </div>
 )
